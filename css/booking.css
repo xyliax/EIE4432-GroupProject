@@ -1,0 +1,88 @@
+#seat-map-div {
+  overflow-x: auto;
+}
+
+#seat-map-svg {
+  width: 800px;
+  height: 400px;
+
+  background-color: #f0f0f0;
+}
+
+#price {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#price h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#price-text {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#price-text:before {
+  content: "\f155"; /* Font Awesome dollar sign icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 5px;
+}
+
+#seat-map h2 {
+  font-weight: bold;
+  color: #2c3e50;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+#seat-map h2:before {
+  content: "\f0c0"; /* Font Awesome users icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 5px;
+}
+#seat-map-svg {
+  fill: none;
+}
+
+#seat-map-svg {
+  fill: none;
+}
+
+#seat-map-svg .seat {
+  stroke: #696969;
+  stroke-width: 1;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+
+#seat-map-svg .seat.available:hover {
+  fill: #4682B4;  /* Color when hovering over an available seat */
+}
+
+
+#seat-map-svg .seat.available {
+  stroke: #696969;
+  stroke-width: 1;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+
+#seat-map-svg .seat.booked {
+  fill: #ff4500; /* Color for booked seats */
+}
+
+#seat-map-svg .seat:hover {
+  fill: #4682b4; /* Color when hovering over a seat */
+}

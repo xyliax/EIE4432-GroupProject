@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/admin.css">
+        <link rel="icon" href="assets/logo.png">
+    </head>
+
+    <body>
+        <section class="d-flex flex-column vh-100">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <a class="navbar-brand ms-2" href="index.html">
+                            <img src="assets/logo.png" class="me-1" height="50" alt="Logo" loading="lazy" />
+                            <small>FlightSell</small>
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item me-2">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="nav-link active" href="dashboard.html">Events</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="nav-link" href="booking.html">Booking</a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <a class="nav-link" href="payment.html">Payment</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                        <a href="login.html" class="btn btn-link px-3 me-2">Login</a>
+                        <a href="register.html" class="btn btn-primary me-4">Sign up for free</a>
+                        <a class="text-reset me-4" href="#">
+                            <i class="fas fas-size fa-shopping-cart"></i>
+                        </a>
+                        <!-- Notifications -->
+                        <div class="dropdown">
+                            <a class="text-reset me-4 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fas-size fa-bell"></i>
+                                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#">Some news</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Another news</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Profile Avatar -->
+                        <div class="dropdown">
+                            <a class="dropdown-toggle me-1 d-flex align-items-center hidden-arrow" href="#"
+                                id="avatar-dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/logo.png" class="rounded-circle" height="50" alt="Avatar"
+                                    loading="lazy" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="avatar-dropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">My profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navigation Bar -->
+
+            <div class="flex-grow-1 container-fluid mt-3">
+                <h2 class="mb-4 text-center">Admin Dashboard</h2>
+
+                <!-- Tabs for different admin functionalities -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#seatManagement" data-mdb-toggle="tab">Seat Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#eventManagement" data-mdb-toggle="tab">Event Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#userManagement" data-mdb-toggle="tab">User Account Management</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="seatManagement">
+                        <!-- Seat Management Content Here -->
+                        <h3 class="mt-3">Manage Seats</h3>
+                        <!-- Placeholder for SVG representation of seats -->
+                        <div class="mt-3">
+                            <p>[SVG representation of seats]</p>
+                            <button class="btn btn-primary">Reset Changes</button>
+                            <button class="btn btn-success">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="eventManagement">
+                        <!-- Event Management Content Here -->
+                        <h3 class="mt-3">Manage Events</h3>
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th>Date/Time</th>
+                                    <th>Title</th>
+                                    <th>Venue</th>
+                                    <th>Description</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Example row for an event -->
+                                <tr>
+                                    <td>01/01/2023 19:00</td>
+                                    <td>XYZ</td>
+                                    <td>A</td>
+                                    <td>You have a trip!</td>
+                                    <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                                </tr>
+                                <!-- Add more rows for more events -->
+                            </tbody>
+                        </table>
+                        <button class="btn btn-primary">Add New Event</button>
+                    </div>
+
+                    <div class="tab-pane fade" id="userManagement">
+                        <!-- User Account Management Content Here -->
+                        <h3 class="mt-3">Manage User Accounts</h3>
+
+                        <!-- Search Box -->
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search by UserID, Nickname or Email">
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </div>
+
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th>UserID</th>
+                                    <th>Nickname</th>
+                                    <th>Email</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Example row for a user -->
+                                <tr>
+                                    <td>001</td>
+                                    <td>JohnDoe</td>
+                                    <td>john@example.com</td>
+                                    <td>
+                                        <button class="btn btn-warning btn-sm" data-mdb-toggle="modal"
+                                            data-mdb-target="#editUserProfileModal">Edit</button>
+                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows for more users -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Edit User Profile Modal -->
+                    <div class="modal fade" id="editUserProfileModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Edit User Profile</h5>
+                                    <button type="button" class="btn-close" data-mdb-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Edit Form -->
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="editUserID" class="form-label">UserID</label>
+                                            <input type="text" class="form-control" id="editUserID" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editNickname" class="form-label">Nickname</label>
+                                            <input type="text" class="form-control" id="editNickname">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editEmail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="editEmail">
+                                        </div>
+                                        <!-- ... Other user attributes as needed ... -->
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-mdb-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer
+                class="d-flex flex-column flex-md-row text-center justify-content-between py-2 px-3 px-xl-5 bg-dark">
+                <div class="text-white mb-4 mb-md-0">
+                    &copy; PEI Yu Xing and Wong Ngo Chit | EIE4432
+                </div>
+                <div>
+                    <a href="#!" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#!" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#!" class="text-white me-4">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#!" class="text-white me-4">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </footer>
+        </section>
+        <!-- MDB -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js">
+        </script>
+    </body>
+
+</html>
