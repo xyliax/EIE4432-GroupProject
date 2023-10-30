@@ -68,9 +68,8 @@
 }
 
 #seat-map-svg .seat.available:hover {
-  fill: #4682B4;  /* Color when hovering over an available seat */
+  fill: #4682b4; /* Color when hovering over an available seat */
 }
-
 
 #seat-map-svg .seat.available {
   stroke: #696969;
